@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://dd6kk4pjfhy1w"]
+
+[ext_resource type="Script" path="res://sky.gd" id="1_3r20v"]
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_urjeh"]
+
+[sub_resource type="Sky" id="Sky_tk58h"]
+sky_material = SubResource("PhysicalSkyMaterial_urjeh")
+
+[sub_resource type="Environment" id="Environment_ffkba"]
+background_mode = 2
+sky = SubResource("Sky_tk58h")
+sdfgi_enabled = true
+
+[node name="Sky" type="Node3D"]
+script = ExtResource("1_3r20v")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ffkba")
+
+[node name="Sun_long_helper" type="Node3D" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Sun_long_helper"]
+shadow_enabled = true
