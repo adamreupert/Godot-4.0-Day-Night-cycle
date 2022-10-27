@@ -1,6 +1,6 @@
 # Godot-4.0-Day-Night-cycle
 
-## Not yet finished
+## Project not yet finished
 
 
 ## System
